@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Booking</title>
+		<script type="text/javascript" src=moment-with-locales.js></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+		<script type="text/javascript" src=bookingscript.js></script>
+	</head>
+	<body>
+		
+		<div class="container" style="border:2px solid #cecece;">
+			<h1>Reservasjon</h1>
+			<div class="form-group">
+				<div class='input-group date' id='datetimepicker11'>
+					<input type='text' id="resdato" class="form-control"/>
+							<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar">
+						</span>
+					</span>
+				</div>
+			</div>
+			 
+			<div class="form-group">
+				<label for="usr">Navn</label>
+ 				<input type="text" class="form-control" id="navn" onkeyup='check()'>
+			</div>
+			
+			<div class="form-group">
+				<label for="usr">Antall gjester</label>
+ 				<input type="text" class="form-control" id="gjester" onkeyup='check()'>
+			</div>
+			
+			<div class="form-group">
+  				<label for="sel1">Bord</label>
+  				<select class="form-control" id="bordnr">
+					    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+					    <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+			 	 </select>
+			</div>	
+		</div>
+		
+		<br>
+		
+		<div class="container" style="border:2px solid #cecece;">
+			<h1>Meny</h1>
+			<div class="form-group">
+  				<label for="sel1">Forrett</label>
+  				<select class="form-control" id="forrett">
+					    <option>Suppe</option><option>Salat</option><option selected>Ingen</option>
+			 	 </select>
+			</div>
+			
+			<div class="form-group">
+  				<label for="sel1">Hovedrett</label>
+  				<select class="form-control" id="hovedrett">
+					<option>Husets hamburger</option><option>Lutefisk</option><option>Pizza</option><option selected>Ingen</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+  				<label for="sel1">Dessert</label>
+  				<select class="form-control" id="dessert">
+					<option>Is</option><option selected>Ingen</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+  				<label for="sel1">Drikke</label>
+  				<select class="form-control" id="drikke">
+					<option>Husets vin</option><option>Brus</option><option>Øl</option><option>Vann</option><option selected>Ingen</option>
+				</select>
+			</div>
+		</div>
+		
+		<br>
+		
+		<div class="container" style="border:2px solid #cecece;">
+			<h1>Betaling</h1>
+			<div class="form-group">
+				<label for="usr">Kortnummer</label>
+ 				<input type="text" class="form-control" id="kortnr" onkeyup='check()'>
+			</div>
+			
+			<div class="form-group">
+				<label for="usr">Utløpsdato</label>
+ 				<input type="text" class="form-control" id="utdato" onkeyup='check()'>
+			</div>
+			
+			<div class="form-group">
+				<label for="usr">Kontrollsifre</label>
+ 				<input type="text" class="form-control" id="kontrollsifre" onkeyup='check()'>
+			</div>
+		</div>
+			<br><input type='button' id='BookBord' value="Book bord" disabled>
+			<br><br><div id="button"><a href="index.html">Gå tilbake</a></div>
+	</body>
+</html>
